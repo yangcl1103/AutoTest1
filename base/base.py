@@ -1,3 +1,6 @@
+import os
+import sys
+
 import allure
 from loguru import logger
 from pywinauto import Desktop
@@ -316,6 +319,23 @@ class BasePage:
         dialog["Edit"].type_keys(filepath)
         dialog["Button"].click()
 
+
+    '''
+    封装当前项目的绝对路径
+    '''
+    def workspace_path(self):
+        path = sys.path[0]
+        return path
+
+    '''
+    封装当前项目的绝对路径
+    '''
+    def file_path(self,filePath):
+        path = sys.path[0]
+        filepath_final = path + '\\' + filePath
+        return filepath_final
+
+
     '''
     回到消息中心页面，且关闭其他页面
     '''
@@ -324,5 +344,23 @@ class BasePage:
         self.rightclick(loc1)
         self.wait_elevisible(loc2, timeout, frequency,doc)
         self.click(loc2)
+
+
+    '''
+    获取真正的项目根目录路径
+    '''
+
+    def get_project_path(project_name='AutoTest'):
+        """
+        获取当前项目根路径
+        :param project_name:
+        :return: 根路径
+        """
+        PROJECT_NAME = 'selenium_project' if project_name is None else project_name
+        project_path = os.path.abspath(os.path.dirname(__file__))
+        root_path = project_path[:project_path.find("{}\\".format(PROJECT_NAME)) + len("{}\\".format(PROJECT_NAME))]
+        # print('当前项目名称：{}\r\n当前项目根路径：{}'.format(PROJECT_NAME, root_path))
+        return root_path
+
 
 

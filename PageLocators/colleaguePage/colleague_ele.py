@@ -1,9 +1,10 @@
 import time
 
 from selenium.webdriver.common.by import By
+from  PageLocators.publicLocators  import  PublicLocators
 
 
-class colleagueElement:
+class colleagueElement(PublicLocators):
     '''
         页面元素
     '''
@@ -91,7 +92,6 @@ class colleagueElement:
     team_sec_detail = (By.XPATH,
                        '/html/body/div[1]/section/section/main/div/div[1]/div[2]/div[1]/div[3]/div/div[1]/div/table/tbody/tr[2]/td[6]/div/div/div')
     # 团队中的编辑     #/html/body/div[1]/section/section/main/div/div[1]/div[2]/div[1]/div[3]/div/div[1]/div/table/tbody/tr[2]/td[6]/div/div/div/button/span
-
 
 
     team_edit = (By.XPATH, '/html/body/div[2]/div[5]/div/div[1]/div/ul/li')

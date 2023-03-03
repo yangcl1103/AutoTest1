@@ -10,7 +10,7 @@ from  PageObjects.login_cen.login_cen_bs import  LoginBS
 
 class TestColleague:
 
-    # 验证编辑
+    # 验证同事编辑
     def test_colleague(self, access_web):
         # ColleagueBS(access_web).colleague_select_edit()
         # ColleagueBS(access_web).colleague_add()

@@ -2,27 +2,27 @@
   "uid" : "b1a8273437954620fa374b796ffaacdd",
   "name" : "behaviors",
   "children" : [ {
-    "name" : "test_login",
-    "uid" : "b79e1b53e1d5ab39",
+    "name" : "test_login[case0]",
+    "uid" : "8ab34677cf60cc11",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
     "status" : "passed",
     "time" : {
-      "start" : 1676362544172,
-      "stop" : 1676362552516,
-      "duration" : 8344
+      "start" : 1677571763560,
+      "stop" : 1677571775288,
+      "duration" : 11728
     },
     "flaky" : false,
     "newFailed" : false,
-    "parameters" : [ ]
+    "parameters" : [ "[2, '登录', '错误的用户名和密码登录，登录成功', \"{'username':'yangcenliang','password':'123456'}\", '登录成功', 'y']" ]
   }, {
     "name" : "test_colleague",
-    "uid" : "8236d61602e0a1ee",
+    "uid" : "b96e54403352af08",
     "parentUid" : "b1a8273437954620fa374b796ffaacdd",
-    "status" : "passed",
+    "status" : "broken",
     "time" : {
-      "start" : 1676362552518,
-      "stop" : 1676362562569,
-      "duration" : 10051
+      "start" : 1677571775292,
+      "stop" : 1677571789041,
+      "duration" : 13749
     },
     "flaky" : false,
     "newFailed" : false,
